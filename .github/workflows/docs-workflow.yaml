@@ -56,7 +56,7 @@ jobs:
         path: edgehog-astarte-interfaces
     - uses: actions/setup-node@v3
       with:
-        node-version: '16.x'
+        node-version: '20.x'
     - name: Install astarte-docs-cli
       run: npm install -g @astarte-platform/astarte-docs-cli@0.0.7
     - name: Generate Interfaces Docs

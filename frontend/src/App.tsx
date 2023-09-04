@@ -50,7 +50,7 @@ import UpdateCampaigns from "pages/UpdateCampaigns";
 import Login from "pages/Login";
 import Logout from "pages/Logout";
 
-import { version, repository, bugs } from "../package.json";
+import packageInfo from "../package.json";
 
 type RouterRule = {
   path: string;
@@ -115,10 +115,10 @@ function App() {
       {auth.isAuthenticated && (
         <Footer
           appName={"Edgehog Device Manager"}
-          appVersion={version}
-          homepageUrl={repository.url}
-          repoUrl={repository.url}
-          issueTrackerUrl={bugs.url}
+          appVersion={packageInfo.version}
+          homepageUrl={packageInfo.repository.url}
+          repoUrl={packageInfo.repository.url}
+          issueTrackerUrl={packageInfo.bugs.url}
         />
       )}
     </div>
